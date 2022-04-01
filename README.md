@@ -1,4 +1,4 @@
-# FieldEditor
+# PlanSum2Plan
 A Varian ESAPI script that can be used to convert PlanSum into a more normal Verification plan. This comes in handy when two or more plans are coming from different CT images and are summed via registration onto a common image. The verification plan can be used, for example, as base dose plan in optimization.
 
 ![image](Image1.png)
@@ -22,7 +22,7 @@ Run the script. Select the PlanSum you would like to convert. Type in a new name
 
 ## Important note
 
-**Before using this program see the [licence](https://github.com/brjdenis/VarianESAPI-PlanSum2Plan/blob/master/LICENSE) and make sure you understand it. The program comes with absolutely no guarantees of any kind.**
+**Before using this program see the [licence](https://github.com/brjdenis/VarianESAPI_PlanSum2Plan/blob/master/LICENSE) and make sure you understand it. The program comes with absolutely no guarantees of any kind.**
 
 ```
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
