@@ -1,0 +1,13 @@
+# Folders to ignore
+.vs/*
+Compiled/*
+bin/*
+obj/*
+
+#Files to ignore
+*.pdb
+VMS.TPS.Common.Model.API.dll
+VMS.TPS.Common.Model.API.xml
+VMS.TPS.Common.Model.Types.dll
+VMS.TPS.Common.Model.Types.xml
+*.p7s
