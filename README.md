@@ -13,12 +13,12 @@ The script was developed for Eclipse version 15.6. It may not work with other ve
 
 ## How to use the script
 
-Run the script. Select the PlanSum you would like to convert. Type in a new name for the plan and click OK.
+Make sure at least one PlanSum is present in the context tree. Run the script. Select the PlanSum you would like to convert. Type in a new name for the plan and click OK.
 
 
 ## Log
 
-
+1. (01/03/2025) Added the option of defining number of fractions and dose per fraction of the resulting verification plan.
 
 ## Important note
 
