@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PlanSum2Plan"
              mc:Ignorable="d" 
-             Height="175" Width="325" Title="PlanSum2Plan" WindowStartupLocation="CenterScreen">
+             Height="220" Width="325" Title="PlanSum2Plan" WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <Style TargetType="{x:Type Button}"/>
         <Style TargetType="{x:Type Label}"/>
@@ -27,6 +27,8 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Grid.Row="0">
             <Label Content="Select PlanSum:" Width="110"></Label>
@@ -37,7 +39,16 @@
             <TextBox x:Name="TextBox1" Width="150" TextChanged="IsNameAvailable" VerticalContentAlignment="Center"/>
             <Label x:Name="LabelSuccess" Width="30"></Label>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Margin="0,15,0,0"  Grid.Row="2" HorizontalAlignment="Center">
+        <StackPanel Orientation="Horizontal" Margin="0,5,0,0" Grid.Row="2">
+            <Label Content="Num. of fractions:" Width="110"></Label>
+            <TextBox x:Name="TextBox2" Width="150" VerticalContentAlignment="Center"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="0,5,0,0" Grid.Row="3">
+            <Label Content="Dose per fraction:" Width="110"></Label>
+            <TextBox x:Name="TextBox3" Width="150" VerticalContentAlignment="Center"/>
+            <Label Width="30">cGy</Label>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="0,15,0,0"  Grid.Row="4" HorizontalAlignment="Center">
             <Button x:Name="OKButton" Content="OK" Click="Button_Click" Width="70" Height="25"/>
             <Button x:Name="CancelButton" Content="Cancel" Click="Button_Click_1" Width="70" Height="25" Margin="20,0,0,0"/>
         </StackPanel>

@@ -103,6 +103,20 @@ namespace PlanSum2Plan
                 return;
             }
 
+            double doseTextbox = ConvertTextToDouble(this.TextBox3.Text);
+            if (Double.IsNaN(doseTextbox))
+            {
+                MessageBox.Show("Illegal dose per fraction.", "Error");
+                return;
+            }
+
+            double numFractions = ConvertTextToDouble(this.TextBox2.Text);
+            if (Double.IsNaN(numFractions))
+            {
+                MessageBox.Show("Illegal number of fractions.", "Error");
+                return;
+            }
+
             try
             {
                 TransferDose(newPlan, plansum);
@@ -119,11 +133,15 @@ namespace PlanSum2Plan
 
         private void TransferDose(ExternalPlanSetup newPlan, PlanSum plansum)
         {
-            int fractions = 1;
-            DoseValue dosePerFraction = plansum.Dose.DoseMax3D;
+            //int fractions = 1;
+            double doseTextbox = ConvertTextToDouble(this.TextBox3.Text);
+            int numFractions = (int)ConvertTextToDouble(this.TextBox2.Text);
+
+            //DoseValue dosePerFraction = plansum.Dose.DoseMax3D;
+            DoseValue dosePerFraction = new DoseValue(doseTextbox, DoseValue.DoseUnit.cGy);
             double treatPercentage = 1;
 
-            newPlan.SetPrescription(fractions, dosePerFraction, treatPercentage);
+            newPlan.SetPrescription(numFractions, dosePerFraction, treatPercentage);
 
             newPlan.PlanNormalizationValue = 100;
 
@@ -214,6 +232,18 @@ namespace PlanSum2Plan
                 }
             }
             return doseMatrix;
+        }
+
+        private double ConvertTextToDouble(string text)
+        {
+            if (Double.TryParse(text, out double result))
+            {
+                return result;
+            }
+            else
+            {
+                return Double.NaN;
+            }
         }
     }
 
